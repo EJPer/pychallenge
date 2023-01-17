@@ -23,10 +23,11 @@ with open(file_path) as budgetcsv:
     previousmonth = float(next(budgetdata)[1])
     total = previousmonth
     totalmonthlydiff = 0
-    #max_change = 0
-    
-    #min_change = 0
-    
+    previousmonthlydiff = 0
+    maxdiff = 0
+    mindiff = 0
+    dateofmax = []
+    dateofmin = []
 #Monhts and total loop
     for rows in budgetdata:
         months+= 1
@@ -34,13 +35,26 @@ with open(file_path) as budgetcsv:
         total += currentmonth
         monthly_diff = currentmonth - previousmonth
         previousmonth = currentmonth
+        if monthly_diff > maxdiff:
+           maxdiff = monthly_diff
+           dateofmax = rows[0]
+
+        elif monthly_diff < mindiff:
+            mindiff = monthly_diff
+            dateofmin = rows[0]
+
         totalmonthlydiff  += monthly_diff
+        previousmonthlydiff = monthly_diff
+
+        
     
     avgmonthlydiff = totalmonthlydiff/ (months - 1)
     
 #pybank answers:
 print('financial analysis')
 print(f"number of months: {months}")
-print(f"Total $ amount: {total}")
-print(avgmonthlydiff)
-    
+print(f"Total $ amount: ${total}")
+print(f"Average Chage: ${avgmonthlydiff}")
+print(f"Greatest Increase in profits :({dateofmax}) ${maxdiff}")
+print(f"Greatest Decrease in profits : ({dateofmin}) ${mindiff}")
+
