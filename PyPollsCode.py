@@ -53,3 +53,20 @@ with open(file_path) as electioncsv:
         print("Winner: Diana DeGette")
     elif winner == raymon:
         print("Winner: Raymon Anthony Doane")
+
+with open("Pypolls.txt", "a") as pypolls:
+    print("Election Results", file=pypolls)
+    print("----------------", file=pypolls)
+    print(f"Total Votes Cast: {votecount}",file=pypolls)
+    print("-----------------",file = pypolls)
+    print(f"Charles Casper Stockham: {charles} ({percentcharles})%",file=pypolls)
+    print(f"Diana DeGette: {diana} ({percentdiana})%", file=pypolls)
+    print(f"Raymon Anthony Doane: {raymon} ({percentraymon})%", file=pypolls)
+    print("----------------",file = pypolls)
+    
+    if winner == charles:
+        print("Winner: Charles Casper Stockham", file = pypolls)
+    elif winner == diana:
+        print("Winner: Diana DeGette",file=pypolls)
+    elif winner == raymon:
+        print("Winner: Raymon Anthony Doane",file=pypolls)

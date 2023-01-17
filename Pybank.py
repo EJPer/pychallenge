@@ -58,3 +58,11 @@ print(f"Average Chage: ${avgmonthlydiff}")
 print(f"Greatest Increase in profits :({dateofmax}) ${maxdiff}")
 print(f"Greatest Decrease in profits : ({dateofmin}) ${mindiff}")
 
+with open("Pybank.txt", "a") as pybank:
+    print('financial analysis', file = pybank)
+    print("-------------------------",file=pybank)
+    print(f"Total Months: {months}", file = pybank)
+    print(f"Total $ amount: ${total}", file= pybank)
+    print(f"Average Chage: ${avgmonthlydiff}", file = pybank)
+    print(f"Greatest Increase in profits :({dateofmax}) ${maxdiff}", file= pybank)
+    print(f"Greatest Decrease in profits : ({dateofmin}) ${mindiff}", file= pybank)
