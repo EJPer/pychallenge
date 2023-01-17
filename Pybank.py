@@ -52,7 +52,8 @@ with open(file_path) as budgetcsv:
     
 #pybank answers:
 print('financial analysis')
-print(f"number of months: {months}")
+print("-------------------------")
+print(f"Total Months: {months}")
 print(f"Total $ amount: ${total}")
 print(f"Average Chage: ${avgmonthlydiff}")
 print(f"Greatest Increase in profits :({dateofmax}) ${maxdiff}")

@@ -1,7 +1,7 @@
 import csv
 import os
 
-file_path = os.path.join('..','Data_sets_for_examples', 'election_data.csv')
+file_path = os.path.join('resources','election_data.csv')
     
 with open(file_path) as electioncsv:
     electiondata = csv.reader(electioncsv, delimiter = ',')
@@ -34,7 +34,7 @@ with open(file_path) as electioncsv:
     
     print("Election Results")
     print("----------------")
-    print(votecount)
+    print(f"Total Votes Cast: {votecount}")
     print("-----------------")
     print(f"Charles Casper Stockham: {charles} ({percentcharles})%")
     print(f"Diana DeGette: {diana} ({percentdiana})%")
