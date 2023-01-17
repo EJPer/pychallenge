@@ -1,23 +1,21 @@
-#Challenge 3 
+
 
 #Import files
 import os
 import csv
 
-#pybank 
-
 #Load in pybank dataset           
 file_path = os.path.join('resources','budget_data.csv')
-
 
  
 with open(file_path) as budgetcsv:
     
     budgetdata = csv.reader(budgetcsv, delimiter = ',')
-    
+
+#Set variables going into Dataset
     header = next(budgetdata)
 
-    
+
     months = 1
     monthly_diff = 0
     previousmonth = float(next(budgetdata)[1])
@@ -28,7 +26,8 @@ with open(file_path) as budgetcsv:
     mindiff = 0
     dateofmax = []
     dateofmin = []
-#Monhts and total loop
+
+#For Loop
     for rows in budgetdata:
         months+= 1
         currentmonth = float(rows[1])
@@ -46,7 +45,7 @@ with open(file_path) as budgetcsv:
         totalmonthlydiff  += monthly_diff
         previousmonthlydiff = monthly_diff
 
-        
+#Calculate results after for loop
     
     avgmonthlydiff = totalmonthlydiff/ (months - 1)
     

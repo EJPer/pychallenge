@@ -1,11 +1,14 @@
+# import packages
 import csv
 import os
 
+#Read in Data
 file_path = os.path.join('resources','election_data.csv')
     
 with open(file_path) as electioncsv:
     electiondata = csv.reader(electioncsv, delimiter = ',')
     
+#set variables before for loop
     header = next(electiondata)
     
     votecount = 0
@@ -13,6 +16,7 @@ with open(file_path) as electioncsv:
     diana = 0
     raymon = 0
     
+#For loop to find variables
     for rows in electiondata:
         votecount += 1
     
@@ -25,13 +29,14 @@ with open(file_path) as electioncsv:
         elif rows[2] == "Charles Casper Stockham":
             charles += 1
         
-    
+#calculating results after loop  
     percentcharles = round((charles / votecount)*100, 3) 
     percentdiana = round((diana / votecount)*100, 3)
     percentraymon = round((raymon / votecount)*100,3)
     
     winner = max(charles, diana, raymon)
-    
+
+#Results
     print("Election Results")
     print("----------------")
     print(f"Total Votes Cast: {votecount}")
