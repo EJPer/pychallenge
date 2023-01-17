@@ -24,6 +24,7 @@ with open(file_path) as budgetcsv:
     total = previousmonth
     totalmonthlydiff = 0
     #max_change = 0
+    
     #min_change = 0
     
 #Monhts and total loop
