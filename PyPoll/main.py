@@ -3,7 +3,8 @@ import csv
 import os
 
 #Read in Data
-file_path = os.path.join('resources','election_data.csv')
+file_path = os.path.join('PyPoll','Resources','election_data.csv')
+
     
 with open(file_path) as electioncsv:
     electiondata = csv.reader(electioncsv, delimiter = ',')

@@ -1,0 +1,7 @@
+financial analysis
+-------------------------
+Total Months: 86
+Total $ amount: $22564198.0
+Average Chage: $-8311.105882352942
+Greatest Increase in profits :(Aug-16) $1862002.0
+Greatest Decrease in profits : (Feb-14) $-1825558.0

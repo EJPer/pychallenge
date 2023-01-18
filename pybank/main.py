@@ -5,7 +5,7 @@ import os
 import csv
 
 #Load in pybank dataset           
-file_path = os.path.join('resources','budget_data.csv')
+file_path = os.path.join('pybank','resources','budget_data.csv')
 
  
 with open(file_path) as budgetcsv:
